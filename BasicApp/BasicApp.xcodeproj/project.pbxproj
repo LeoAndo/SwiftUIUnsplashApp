@@ -23,6 +23,8 @@
 		AAB8A29727D720EC00E61D85 /* TodoUiState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB8A29627D720EC00E61D85 /* TodoUiState.swift */; };
 		AAB8A29927D7210C00E61D85 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB8A29827D7210C00E61D85 /* SearchViewModel.swift */; };
 		AAB8A29B27D7212E00E61D85 /* SearchUiState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB8A29A27D7212E00E61D85 /* SearchUiState.swift */; };
+		AAB8A29D27D761FA00E61D85 /* UnsplashRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB8A29C27D761FA00E61D85 /* UnsplashRepository.swift */; };
+		AAB8A2A227D76BFA00E61D85 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = AAB8A2A127D76BFA00E61D85 /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,7 @@
 		AAB8A29627D720EC00E61D85 /* TodoUiState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoUiState.swift; sourceTree = "<group>"; };
 		AAB8A29827D7210C00E61D85 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		AAB8A29A27D7212E00E61D85 /* SearchUiState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUiState.swift; sourceTree = "<group>"; };
+		AAB8A29C27D761FA00E61D85 /* UnsplashRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAB8A2A227D76BFA00E61D85 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +199,7 @@
 		AAB8A27D27D636BB00E61D85 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				AAB8A29C27D761FA00E61D85 /* UnsplashRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -274,6 +279,9 @@
 			dependencies = (
 			);
 			name = BasicApp;
+			packageProductDependencies = (
+				AAB8A2A127D76BFA00E61D85 /* SDWebImageSwiftUI */,
+			);
 			productName = BasicApp;
 			productReference = AAB8A24B27D6334400E61D85 /* BasicApp.app */;
 			productType = "com.apple.product-type.application";
@@ -346,6 +354,9 @@
 				Base,
 			);
 			mainGroup = AAB8A24227D6334300E61D85;
+			packageReferences = (
+				AAB8A2A027D76BFA00E61D85 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = AAB8A24C27D6334400E61D85 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -393,6 +404,7 @@
 				AAB8A29727D720EC00E61D85 /* TodoUiState.swift in Sources */,
 				AAB8A28D27D71DB500E61D85 /* HomeViewModel.swift in Sources */,
 				AAB8A28727D6389E00E61D85 /* HomeView.swift in Sources */,
+				AAB8A29D27D761FA00E61D85 /* UnsplashRepository.swift in Sources */,
 				AAB8A25127D6334400E61D85 /* ContentView.swift in Sources */,
 				AAB8A29927D7210C00E61D85 /* SearchViewModel.swift in Sources */,
 				AAB8A29027D71FB600E61D85 /* HomeUiState.swift in Sources */,
@@ -725,6 +737,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AAB8A2A027D76BFA00E61D85 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AAB8A2A127D76BFA00E61D85 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AAB8A2A027D76BFA00E61D85 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AAB8A24327D6334300E61D85 /* Project object */;
 }
