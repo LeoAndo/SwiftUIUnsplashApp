@@ -18,11 +18,10 @@ struct ContentView: View {
                 Image(systemName: "pencil.circle.fill")
                 Text("Todo")
             }
-            SeachView().tabItem() {
+            SearchView().tabItem() {
                 Image(systemName: "magnifyingglass.circle.fill")
                 Text("Search")
             }
-            
         }
     }
 }
