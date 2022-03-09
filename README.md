@@ -29,22 +29,19 @@
   - DI
     - [Resolver](https://github.com/hmlongco/Resolver)
   - Unit Test
-    - xxx
+    - It is being implemented.
   - Network
     - [Alamofire](https://github.com/Alamofire/Alamofire)
   - local
-    - xxxx
+    - It is being implemented.
   - Web API 
     - ([Unsplash](https://unsplash.com/documentation)) 
   - app architecture
     - MVVM + SwiftUI + Combine
 
-  - app architecture
-    - MVVM + SwiftUI + Combine
-
-- capture (iPhone 13 Pro OS 15.2)
-
-<img src="https://github.com/LeoAndo/ios-app-templates/blob/main/capture_basicapp.png" width=320 />
+| iPhone 13 Pro OS 15.2 |
+|:---|
+|<img src="https://github.com/LeoAndo/ios-app-templates/blob/main/capture_basicapp.png" width=320 /> |
 
 # refs
 https://gist.github.com/ollieatkinson/322338df8a5220d649ac01ff11e7de12<br>
