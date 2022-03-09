@@ -4,11 +4,6 @@
 
 <img width="526" alt="スクリーンショット 2022-03-09 16 08 32" src="https://user-images.githubusercontent.com/16476224/157390357-2b65b083-7189-4870-a8ff-07899d636695.png">
 
-
-# App architecture
-
-MVVM + SwiftUI
-
 # implementation Rules
 
 - ui layer
@@ -23,3 +18,22 @@ MVVM + SwiftUI
   - Any work performed in a call local/remote data should be io thread.
 
 # [BasicApp](https://github.com/LeoAndo/ios-app-templates/tree/main/BasicApp)
+
+- Features
+  - UI
+    - SwiftUI
+  - DI
+    - Resolver
+  - Unit Test
+    - xxx
+  - Network
+    -  Alamofire
+  - local
+    - xxxx
+  - Web API 
+    - ([Unsplash](https://unsplash.com/documentation)) 
+  - app architecture
+    - MVVM + SwiftUI
+
+  - other
+    - xxxx
