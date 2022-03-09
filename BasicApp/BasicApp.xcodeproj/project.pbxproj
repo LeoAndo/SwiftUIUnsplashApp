@@ -12,6 +12,13 @@
 		AAA5D04027D8771C00EF095E /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA5D03F27D8771C00EF095E /* Injection.swift */; };
 		AAA5D04A27D87A6300EF095E /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = AAA5D04927D87A6300EF095E /* Resolver */; };
 		AAA5D04D27D87F6F00EF095E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AAA5D04C27D87F6F00EF095E /* Alamofire */; };
+		AAA5D04F27D894FD00EF095E /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA5D04E27D894FD00EF095E /* APIError.swift */; };
+		AAA5D05127D8989B00EF095E /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA5D05027D8989B00EF095E /* APIClient.swift */; };
+		AAA5D05327D8991200EF095E /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA5D05227D8991200EF095E /* APIRequest.swift */; };
+		AAA5D05527D89A3C00EF095E /* PresentableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA5D05427D89A3C00EF095E /* PresentableError.swift */; };
+		AAA5D05927D89B3900EF095E /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA5D05827D89B3900EF095E /* HTTPStatusCode.swift */; };
+		AAA5D05B27D89CB600EF095E /* UnsplashServiceInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA5D05A27D89CB600EF095E /* UnsplashServiceInterceptor.swift */; };
+		AAA5D05D27D8A20700EF095E /* UnsplashService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA5D05C27D8A20700EF095E /* UnsplashService.swift */; };
 		AAB8A24F27D6334400E61D85 /* BasicAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB8A24E27D6334400E61D85 /* BasicAppApp.swift */; };
 		AAB8A25127D6334400E61D85 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB8A25027D6334400E61D85 /* ContentView.swift */; };
 		AAB8A25327D6334500E61D85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAB8A25227D6334500E61D85 /* Assets.xcassets */; };
@@ -53,6 +60,13 @@
 		AAA5D03927D83D8900EF095E /* UnSplashPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnSplashPhoto.swift; sourceTree = "<group>"; };
 		AAA5D03C27D846F400EF095E /* Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
 		AAA5D03F27D8771C00EF095E /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
+		AAA5D04E27D894FD00EF095E /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		AAA5D05027D8989B00EF095E /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		AAA5D05227D8991200EF095E /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		AAA5D05427D89A3C00EF095E /* PresentableError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentableError.swift; sourceTree = "<group>"; };
+		AAA5D05827D89B3900EF095E /* HTTPStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
+		AAA5D05A27D89CB600EF095E /* UnsplashServiceInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashServiceInterceptor.swift; sourceTree = "<group>"; };
+		AAA5D05C27D8A20700EF095E /* UnsplashService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashService.swift; sourceTree = "<group>"; };
 		AAB8A24B27D6334400E61D85 /* BasicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAB8A24E27D6334400E61D85 /* BasicAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicAppApp.swift; sourceTree = "<group>"; };
 		AAB8A25027D6334400E61D85 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -116,6 +130,18 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AAA5D06027D8C05000EF095E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				AAA5D04E27D894FD00EF095E /* APIError.swift */,
+				AAA5D05027D8989B00EF095E /* APIClient.swift */,
+				AAA5D05227D8991200EF095E /* APIRequest.swift */,
+				AAA5D05427D89A3C00EF095E /* PresentableError.swift */,
+				AAA5D05827D89B3900EF095E /* HTTPStatusCode.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		AAB8A24227D6334300E61D85 = {
@@ -200,6 +226,7 @@
 		AAB8A27A27D6367200E61D85 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				AAA5D06027D8C05000EF095E /* Core */,
 				AAB8A28227D6376200E61D85 /* Databases */,
 				AAB8A27D27D636BB00E61D85 /* Repositories */,
 				AAB8A27C27D6368500E61D85 /* API */,
@@ -219,7 +246,8 @@
 		AAB8A27C27D6368500E61D85 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				AAB8A28127D6375200E61D85 /* Responses */,
+				AAA5D05A27D89CB600EF095E /* UnsplashServiceInterceptor.swift */,
+				AAA5D05C27D8A20700EF095E /* UnsplashService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -238,13 +266,6 @@
 				AAA5D03927D83D8900EF095E /* UnSplashPhoto.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		AAB8A28127D6375200E61D85 /* Responses */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Responses;
 			sourceTree = "<group>";
 		};
 		AAB8A28227D6376200E61D85 /* Databases */ = {
@@ -433,10 +454,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAA5D04027D8771C00EF095E /* Injection.swift in Sources */,
+				AAA5D05127D8989B00EF095E /* APIClient.swift in Sources */,
+				AAA5D05B27D89CB600EF095E /* UnsplashServiceInterceptor.swift in Sources */,
 				AAB8A29527D720D100E61D85 /* TodoViewModel.swift in Sources */,
 				AAB8A28B27D638C500E61D85 /* SearchView.swift in Sources */,
 				AAB8A29727D720EC00E61D85 /* TodoUiState.swift in Sources */,
 				AAB8A28D27D71DB500E61D85 /* HomeViewModel.swift in Sources */,
+				AAA5D05927D89B3900EF095E /* HTTPStatusCode.swift in Sources */,
 				AAB8A28727D6389E00E61D85 /* HomeView.swift in Sources */,
 				AAA5D03A27D83D8900EF095E /* UnSplashPhoto.swift in Sources */,
 				AAB8A29D27D761FA00E61D85 /* UnsplashRepository.swift in Sources */,
@@ -444,8 +468,12 @@
 				AAB8A29927D7210C00E61D85 /* SearchViewModel.swift in Sources */,
 				AAB8A29027D71FB600E61D85 /* HomeUiState.swift in Sources */,
 				AAA5D03D27D846F400EF095E /* Progress.swift in Sources */,
+				AAA5D05527D89A3C00EF095E /* PresentableError.swift in Sources */,
 				AAB8A28927D638AF00E61D85 /* TodoView.swift in Sources */,
+				AAA5D05D27D8A20700EF095E /* UnsplashService.swift in Sources */,
+				AAA5D04F27D894FD00EF095E /* APIError.swift in Sources */,
 				AAB8A24F27D6334400E61D85 /* BasicAppApp.swift in Sources */,
+				AAA5D05327D8991200EF095E /* APIRequest.swift in Sources */,
 				AAB8A29B27D7212E00E61D85 /* SearchUiState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

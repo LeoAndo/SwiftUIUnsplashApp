@@ -50,12 +50,6 @@ struct HomeContent: View {
     }
 }
 
-struct HomeContent_Preview_Success: PreviewProvider {
-    static var previews: some View {
-        HomeView()
-    }
-}
-
 struct HomeContent_Preview_Error: PreviewProvider {
     static var previews: some View {
         HomeContent(uiState: HomeUiState.error("Error!!!!"))
