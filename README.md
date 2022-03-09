@@ -10,11 +10,14 @@
   - [Allows preview by state by taking uiState as an argument](https://github.com/LeoAndo/ios-app-templates/blob/main/BasicApp/BasicApp/Views/Home/HomeView.swift#L53:L73)
   - If simple logic, Call Repository (Interface) directly from ViewModel.
   - Any work performed in a ViewModel should be main-safe—safe to call from the main thread.
+  - use uistate
+    - https://github.com/LeoAndo/ios-app-templates/blob/main/BasicApp/BasicApp/Views/Home/HomeUiState.swift
+    - https://github.com/LeoAndo/ios-app-templates/blob/main/BasicApp/BasicApp/Views/Home/HomeViewModel.swift#L13 
 - domain layer
   - Pure Swift.
   - Any work performed in a usecase should be main-safe—safe to call from the main thread.
 - data layer
-  - Error handling and returning a custom Exception instance
+  - Error handling and returning a custom Response object
   - Any work performed in a call local/remote data should be io thread.
 
 # [BasicApp](https://github.com/LeoAndo/ios-app-templates/tree/main/BasicApp)
@@ -24,17 +27,14 @@
     - SwiftUI
     - [SDWebImageSwiftUI](https://github.com/SDWebImage/SDWebImageSwiftUI)
   - DI
-    - Resolver
+    - [Resolver](https://github.com/hmlongco/Resolver)
   - Unit Test
     - xxx
   - Network
-    -  Alamofire
+    - [Alamofire](https://github.com/Alamofire/Alamofire)
   - local
     - xxxx
   - Web API 
     - ([Unsplash](https://unsplash.com/documentation)) 
   - app architecture
-    - MVVM + SwiftUI
-
-  - other
-    - xxxx
+    - MVVM + SwiftUI + Combine
