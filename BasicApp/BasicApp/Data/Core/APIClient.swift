@@ -9,7 +9,6 @@ import Combine
 import Foundation
 import Resolver
 
-/// @mockable
 protocol APIClient {
     func requestPublisher<R>(_ request: R) -> AnyPublisher<R.ResponseEntity, APIError> where R: APIRequest
 }

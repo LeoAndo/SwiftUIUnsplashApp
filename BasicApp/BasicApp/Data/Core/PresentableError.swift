@@ -7,8 +7,5 @@
 
 import Foundation
 protocol PresentableError: Error {
-    /// UIAlertController#title に相当
-    var title: String? { get }
-    /// UIAlertController#message に相当
     var message: String { get }
 }

@@ -14,7 +14,6 @@ struct UnSplashPhoto : Decodable {
     struct Result : Decodable, Identifiable {
         let id: String
         let urls: Urls
-        // let user: User
     }
     struct Urls : Decodable {
         let full: String

@@ -13,7 +13,6 @@ enum APIError: Error {
 }
 
 extension APIError: PresentableError {
-    var title: String? { nil }
     var message: String {
         switch self {
         case let .http(code):
