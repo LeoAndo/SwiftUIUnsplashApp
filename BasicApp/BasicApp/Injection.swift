@@ -11,5 +11,9 @@ extension Resolver: ResolverRegistering {
     static let session = ResolverScopeCache()
     public static func registerAllServices() {
         register { UnsplashRepositoryImpl() as UnsplashRepository }
+        registerSessionServices()
+    }
+    public static func registerSessionServices() {
+        register(name: Resolver.Name.unsplash) { APIClientImpl(interceptor: UnsplashServiceInterceptor()) as APIClient }.scope(session)
     }
 }
