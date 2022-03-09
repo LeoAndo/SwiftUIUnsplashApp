@@ -9,8 +9,7 @@ import Foundation
 
 enum HomeUiState {
      struct Data {
-         let title: String
-         let description: String
+         let images: [UnSplashPhoto.Result]
      }
      case initial
      case loading
