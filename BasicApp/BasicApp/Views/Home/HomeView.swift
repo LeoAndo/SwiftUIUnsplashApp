@@ -6,25 +6,68 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct HomeView: View {
     @ObservedObject var viewModel = HomeViewModel()
     var body: some View {
-        switch viewModel.uiState {
+        HomeContent(uiState: viewModel.uiState).onAppear(perform: viewModel.onAppear)
+    }
+}
+
+struct HomeContent: View {
+    let uiState: HomeUiState
+    var body: some View {
+        switch self.uiState {
         case .data(let data):
-            Text(data.title)
+            VStack(spacing: 0) {
+                if !data.images.isEmpty {
+                    ScrollView(.vertical, showsIndicators: true) {
+                        VStack(spacing: 16) {
+                            ForEach(data.images) { j in
+                                AnimatedImage(url: URL(string: j.urls.regular))
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: 200, height: 200 )
+                                    .cornerRadius(16)
+                            }
+                        }.padding(.top)
+                    }
+                } else {
+                    Text("result empty...")
+                }
+            }
+            .padding(.top, UIApplication.shared.windows.first!.safeAreaInsets.top)
         case .initial:
-            Text("initial").onAppear(perform: viewModel.onAppear)
+            Spacer()
         case .loading:
-            Text("loading")
+            Spacer()
+            Progress()
+            Spacer()
         case .error(let message):
             Text(message)
         }
     }
 }
 
-struct HomeView_Previews: PreviewProvider {
+struct HomeContent_Preview_Success: PreviewProvider {
     static var previews: some View {
         HomeView()
+    }
+}
+
+struct HomeContent_Preview_Error: PreviewProvider {
+    static var previews: some View {
+        HomeContent(uiState: HomeUiState.error("Error!!!!"))
+    }
+}
+struct HomeContent_Preview_Loading: PreviewProvider {
+    static var previews: some View {
+        HomeContent(uiState: HomeUiState.loading)
+    }
+}
+struct HomeContent_Preview_Initial: PreviewProvider {
+    static var previews: some View {
+        HomeContent(uiState: HomeUiState.initial)
     }
 }
