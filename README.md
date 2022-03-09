@@ -21,3 +21,5 @@ MVVM + SwiftUI
 - data layer
   - Error handling and returning a custom Exception instance
   - Any work performed in a call local/remote data should be io thread.
+
+# [BasicApp](https://github.com/LeoAndo/ios-app-templates/tree/main/BasicApp)
