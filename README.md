@@ -7,12 +7,12 @@
 # implementation Rules
 
 - ui layer
-  - [Allows preview by state by taking uiState as an argument](https://github.com/LeoAndo/ios-app-templates/blob/main/BasicApp/BasicApp/Views/Home/HomeView.swift#L53:L73)
+  - [Allows preview by state by taking uiState as an argument](https://github.com/LeoAndo/ios-app-templates/blob/main/BasicApp/BasicApp/Views/Home/HomeView.swift#L51:L59)
   - If simple logic, Call Repository (Interface) directly from ViewModel.
   - Any work performed in a ViewModel should be main-safe—safe to call from the main thread.
   - use uistate
     - https://github.com/LeoAndo/ios-app-templates/blob/main/BasicApp/BasicApp/Views/Home/HomeUiState.swift
-    - https://github.com/LeoAndo/ios-app-templates/blob/main/BasicApp/BasicApp/Views/Home/HomeViewModel.swift#L13 
+    - https://github.com/LeoAndo/ios-app-templates/blob/main/BasicApp/BasicApp/Views/Home/HomeViewModel.swift#L12
   - ViewModel used `@MainActor` because Fix below error Log
     ```
     Fix: [SwiftUI] Publishing changes from background threads is not allowed; make sure to publish values from the main thread (via operators like receive(on:)) on model updates.  
