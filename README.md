@@ -51,3 +51,4 @@
 
 # refs
 https://gist.github.com/ollieatkinson/322338df8a5220d649ac01ff11e7de12<br>
+https://github.com/Alamofire/Alamofire/blob/master/Source/HTTPMethod.swift<br>
