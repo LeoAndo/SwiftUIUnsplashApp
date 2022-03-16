@@ -43,7 +43,7 @@
   - Web API 
     - ([Unsplash](https://unsplash.com/documentation)) 
   - app architecture
-    - MVVM + SwiftUI + Combine
+    - MVVM + SwiftUI
 
 | iPhone 13 Pro OS 15.2 |
 |:---|
