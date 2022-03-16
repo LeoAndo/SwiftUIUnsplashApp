@@ -9,10 +9,10 @@ import Foundation
 
 enum APIError: Error {
     case http(HTTPStatusCode)
-    case unexpected(Error?)
+    case unexpected
 }
 
-extension APIError: PresentableError {
+extension APIError {
     var message: String {
         switch self {
         case let .http(code):

@@ -14,6 +14,6 @@ extension Resolver: ResolverRegistering {
         registerSessionServices()
     }
     public static func registerSessionServices() {
-        register(name: Resolver.Name.unsplash) { APIClientImpl(interceptor: UnsplashServiceInterceptor()) as APIClient }.scope(session)
+        register(name: Resolver.Name.unsplash) { APIClientImpl() as APIClient }.scope(session)
     }
 }

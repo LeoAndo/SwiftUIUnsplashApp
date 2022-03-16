@@ -10,7 +10,7 @@ import Foundation
 import Resolver
 
 protocol UnsplashRepository: AnyObject {
-    func searchPhotos()  -> AnyPublisher<UnSplashPhoto, APIError>
+    func searchPhotos() async throws -> UnSplashPhoto
 }
 
 final class UnsplashRepositoryImpl: UnsplashRepository {
@@ -20,7 +20,7 @@ final class UnsplashRepositoryImpl: UnsplashRepository {
         self.client = client
     }
     
-    func searchPhotos() -> AnyPublisher<UnSplashPhoto, APIError> {
-        self.client.requestPublisher(UnsplashService.SearchPhotos())
+    func searchPhotos() async throws -> UnSplashPhoto {
+        return try await client.fetch(UnsplashService.SearchPhotos())
     }
 }

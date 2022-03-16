@@ -9,6 +9,7 @@ import Combine
 import Foundation
 import Resolver
 
+@MainActor
 final class HomeViewModel: ObservableObject {
     @Published var uiState:HomeUiState = HomeUiState.initial
     private let repository: UnsplashRepository
@@ -19,20 +20,18 @@ final class HomeViewModel: ObservableObject {
         guard let self = self else { return }
         print("Perform the processing when the screen is displayed here.")
     }
-    
+
     init(repository: UnsplashRepository = Resolver.resolve()) {
         self.repository = repository
         uiState = HomeUiState.loading
-        repository.searchPhotos().sink { completion in
-            switch completion {
-            case .finished:
-                print("fetch Finished!")
-            case let .failure(error):
-                print("fetch failure!")
-                self.uiState = HomeUiState.error(error.message)
+        Task {
+            do {
+                let photos = try await repository.searchPhotos()
+                self.uiState = HomeUiState.data(HomeUiState.Data(images: photos.results))
+            } catch {
+                guard let e =  error as? APIError else { return }
+                self.uiState = HomeUiState.error(e.message)
             }
-        } receiveValue: { photos in
-            self.uiState = HomeUiState.data(HomeUiState.Data(images: photos.results))
-        }.store(in: &cancellables)
+        }
     }
 }
