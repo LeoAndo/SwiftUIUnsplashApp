@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TodoView: View {
-    @ObservedObject var viewModel = TodoViewModel()
+    @ObservedObject var viewModel: TodoViewModel
     var body: some View {
         switch viewModel.uiState {
         case .data(let data):
@@ -25,6 +25,6 @@ struct TodoView: View {
 
 struct TodoView_Previews: PreviewProvider {
     static var previews: some View {
-        TodoView()
+        TodoView(viewModel: TodoViewModel())
     }
 }
