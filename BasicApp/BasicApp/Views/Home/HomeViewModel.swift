@@ -20,10 +20,7 @@ final class HomeViewModel: ObservableObject {
         guard let self = self else { return }
         print("Perform the processing when the screen is displayed here.")
     }
-    
-    /**
-     2022-03-16 20:21:08.921845+0900 BasicApp[92240:3254766] [SwiftUI] Publishing changes from background threads is not allowed; make sure to publish values from the main thread (via operators like receive(on:)) on model updates.
-     */
+
     init(repository: UnsplashRepository = Resolver.resolve()) {
         self.repository = repository
         uiState = HomeUiState.loading
