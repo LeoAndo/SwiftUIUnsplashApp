@@ -5,15 +5,12 @@
 //  Created by LeoAndo on 2022/03/08.
 //
 import Foundation
-import Combine
-import Foundation
 import Resolver
 
 @MainActor
 final class HomeViewModel: ObservableObject {
     @Published var uiState:HomeUiState = HomeUiState.initial
     private let repository: UnsplashRepository
-    private var cancellables = Set<AnyCancellable>()
     
     
     private(set)lazy var onAppear:() -> Void = { [weak self] in
