@@ -4,44 +4,22 @@
 //
 //  Created by LeoAndo on 2022/03/09.
 //
-
-import Alamofire
 import Foundation
 
-protocol APIRequest: URLRequestConvertible {
+protocol APIRequest {
     associatedtype ResponseEntity: Decodable
-    var baseURL: URL { get }
+    var baseURL: String { get }
     var method: HTTPMethod { get }
     var path: String { get }
-    var headers: HTTPHeaders { get }
-    var queryParameters: Parameters? { get }
-}
-
-extension APIRequest {
-    var headers: HTTPHeaders { ["Content-Type": "application/json"] }
-    var queryParameters: Parameters? { nil }
-}
-
-extension APIRequest {
-    func asURLRequest() throws -> URLRequest {
-        let url = baseURL.appendingPathComponent(path)
-        var req = URLRequest(url: url)
-        req.method = method
-        req.headers = headers
-
-        if let query = queryParameters {
-            req = try URLEncoding.default.encode(req, with: query)
-        }
-        return req
-    }
+    func asURLRequest() throws -> URLRequest
 }
 
 enum APIBaseURL {
     case unsplash
-    var value: URL {
+    var value: String {
         switch self {
         case .unsplash:
-            return URL(string: "https://api.unsplash.com/")!
+            return "https://api.unsplash.com/"
         }
     }
 }

@@ -15,10 +15,9 @@
 		AAA5D04F27D894FD00EF095E /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA5D04E27D894FD00EF095E /* APIError.swift */; };
 		AAA5D05127D8989B00EF095E /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA5D05027D8989B00EF095E /* APIClient.swift */; };
 		AAA5D05327D8991200EF095E /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA5D05227D8991200EF095E /* APIRequest.swift */; };
-		AAA5D05527D89A3C00EF095E /* PresentableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA5D05427D89A3C00EF095E /* PresentableError.swift */; };
 		AAA5D05927D89B3900EF095E /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA5D05827D89B3900EF095E /* HTTPStatusCode.swift */; };
-		AAA5D05B27D89CB600EF095E /* UnsplashServiceInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA5D05A27D89CB600EF095E /* UnsplashServiceInterceptor.swift */; };
 		AAA5D05D27D8A20700EF095E /* UnsplashService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA5D05C27D8A20700EF095E /* UnsplashService.swift */; };
+		AAA5D06227E20B3200EF095E /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA5D06127E20B3200EF095E /* HTTPMethod.swift */; };
 		AAB8A24F27D6334400E61D85 /* BasicAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB8A24E27D6334400E61D85 /* BasicAppApp.swift */; };
 		AAB8A25127D6334400E61D85 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB8A25027D6334400E61D85 /* ContentView.swift */; };
 		AAB8A25327D6334500E61D85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAB8A25227D6334500E61D85 /* Assets.xcassets */; };
@@ -63,10 +62,9 @@
 		AAA5D04E27D894FD00EF095E /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		AAA5D05027D8989B00EF095E /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		AAA5D05227D8991200EF095E /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
-		AAA5D05427D89A3C00EF095E /* PresentableError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentableError.swift; sourceTree = "<group>"; };
 		AAA5D05827D89B3900EF095E /* HTTPStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
-		AAA5D05A27D89CB600EF095E /* UnsplashServiceInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashServiceInterceptor.swift; sourceTree = "<group>"; };
 		AAA5D05C27D8A20700EF095E /* UnsplashService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashService.swift; sourceTree = "<group>"; };
+		AAA5D06127E20B3200EF095E /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		AAB8A24B27D6334400E61D85 /* BasicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAB8A24E27D6334400E61D85 /* BasicAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicAppApp.swift; sourceTree = "<group>"; };
 		AAB8A25027D6334400E61D85 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -138,8 +136,8 @@
 				AAA5D04E27D894FD00EF095E /* APIError.swift */,
 				AAA5D05027D8989B00EF095E /* APIClient.swift */,
 				AAA5D05227D8991200EF095E /* APIRequest.swift */,
-				AAA5D05427D89A3C00EF095E /* PresentableError.swift */,
 				AAA5D05827D89B3900EF095E /* HTTPStatusCode.swift */,
+				AAA5D06127E20B3200EF095E /* HTTPMethod.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -246,7 +244,6 @@
 		AAB8A27C27D6368500E61D85 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				AAA5D05A27D89CB600EF095E /* UnsplashServiceInterceptor.swift */,
 				AAA5D05C27D8A20700EF095E /* UnsplashService.swift */,
 			);
 			path = API;
@@ -455,7 +452,6 @@
 			files = (
 				AAA5D04027D8771C00EF095E /* Injection.swift in Sources */,
 				AAA5D05127D8989B00EF095E /* APIClient.swift in Sources */,
-				AAA5D05B27D89CB600EF095E /* UnsplashServiceInterceptor.swift in Sources */,
 				AAB8A29527D720D100E61D85 /* TodoViewModel.swift in Sources */,
 				AAB8A28B27D638C500E61D85 /* SearchView.swift in Sources */,
 				AAB8A29727D720EC00E61D85 /* TodoUiState.swift in Sources */,
@@ -467,8 +463,8 @@
 				AAB8A25127D6334400E61D85 /* ContentView.swift in Sources */,
 				AAB8A29927D7210C00E61D85 /* SearchViewModel.swift in Sources */,
 				AAB8A29027D71FB600E61D85 /* HomeUiState.swift in Sources */,
+				AAA5D06227E20B3200EF095E /* HTTPMethod.swift in Sources */,
 				AAA5D03D27D846F400EF095E /* Progress.swift in Sources */,
-				AAA5D05527D89A3C00EF095E /* PresentableError.swift in Sources */,
 				AAB8A28927D638AF00E61D85 /* TodoView.swift in Sources */,
 				AAA5D05D27D8A20700EF095E /* UnsplashService.swift in Sources */,
 				AAA5D04F27D894FD00EF095E /* APIError.swift in Sources */,
