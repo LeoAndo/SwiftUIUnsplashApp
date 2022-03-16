@@ -9,7 +9,7 @@ import SwiftUI
 import SDWebImageSwiftUI
 
 struct HomeView: View {
-    @ObservedObject var viewModel = HomeViewModel()
+    @ObservedObject var viewModel: HomeViewModel
     var body: some View {
         HomeContent(uiState: viewModel.uiState).onAppear(perform: viewModel.onAppear)
     }
