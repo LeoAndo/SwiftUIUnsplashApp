@@ -11,7 +11,7 @@ import SDWebImageSwiftUI
 struct HomeView: View {
     @ObservedObject var viewModel: HomeViewModel
     var body: some View {
-        HomeContent(uiState: viewModel.uiState).onAppear(perform: viewModel.onAppear)
+        HomeContent(uiState: viewModel.uiState)
     }
 }
 
@@ -39,29 +39,21 @@ struct HomeContent: View {
             }
             .padding(.top, UIApplication.shared.windows.first!.safeAreaInsets.top)
         case .initial:
-            Spacer()
+            EmptyView()
         case .loading:
-            Spacer()
             Progress()
-            Spacer()
         case .error(let message):
             Text(message)
         }
     }
 }
 
-struct HomeContent_Preview_Error: PreviewProvider {
+struct HomeContent_Preview: PreviewProvider {
     static var previews: some View {
-        HomeContent(uiState: HomeUiState.error("Error!!!!"))
-    }
-}
-struct HomeContent_Preview_Loading: PreviewProvider {
-    static var previews: some View {
-        HomeContent(uiState: HomeUiState.loading)
-    }
-}
-struct HomeContent_Preview_Initial: PreviewProvider {
-    static var previews: some View {
-        HomeContent(uiState: HomeUiState.initial)
+        Group {
+            HomeContent(uiState: HomeUiState.error("Error!!!!"))
+            HomeContent(uiState: HomeUiState.loading)
+            HomeContent(uiState: HomeUiState.initial)
+        }
     }
 }
