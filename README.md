@@ -30,6 +30,7 @@
   - UI
     - SwiftUI
     - [AsyncImage](https://developer.apple.com/documentation/swiftui/asyncimage)
+      - target of iOS 15+
   - DI
     - [Resolver](https://github.com/hmlongco/Resolver)
   - Unit Test
