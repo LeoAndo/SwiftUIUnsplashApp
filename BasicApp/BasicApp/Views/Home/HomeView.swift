@@ -25,11 +25,21 @@ struct HomeContent: View {
                     ScrollView(.vertical, showsIndicators: true) {
                         VStack(spacing: 16) {
                             ForEach(data.images) { j in
-                                AnimatedImage(url: URL(string: j.urls.regular))
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: 200, height: 200 )
-                                    .cornerRadius(16)
+                                AsyncImage(url: URL(string: j.urls.regular)) { phase in
+                                    if let image = phase.image {
+                                        image.resizable() // Displays the loaded image.
+                                    } else if phase.error != nil {
+                                        Image(systemName: "xmark.octagon")
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fill)
+                                            .foregroundColor(Color.red.opacity(0.8))
+                                            .frame(width: 80, height: 80 )
+                                            .cornerRadius(16)
+                                    } else {
+                                        Progress() // Acts as a placeholder.
+                                    }
+                                }
+                                .frame(width: 200, height: 200 ).cornerRadius(16)
                             }
                         }.padding(.top)
                     }
