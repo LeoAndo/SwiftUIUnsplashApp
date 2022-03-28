@@ -29,7 +29,7 @@
 - Features
   - UI
     - SwiftUI
-    - [SDWebImageSwiftUI](https://github.com/SDWebImage/SDWebImageSwiftUI)
+    - [AsyncImage](https://developer.apple.com/documentation/swiftui/asyncimage)
   - DI
     - [Resolver](https://github.com/hmlongco/Resolver)
   - Unit Test
