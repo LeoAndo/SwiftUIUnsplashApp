@@ -6,6 +6,7 @@
 
 # App architecture
 
+- MVVM(Model-View-ViewModel(State Holder))
 <img width="582" alt="スクリーンショット 2021-12-20 15 58 59" src="https://user-images.githubusercontent.com/16476224/146725205-ac598f5f-c5a6-4cc4-8d38-559ca50bdf77.png">
 
 # implementation Rules
