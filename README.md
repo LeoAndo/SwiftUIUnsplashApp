@@ -8,6 +8,7 @@
 
 - ui layer
   - [Allows preview by state by taking uiState as an argument](https://github.com/LeoAndo/ios-app-templates/blob/main/BasicApp/BasicApp/Views/Home/HomeView.swift#L51:L59)
+  - The file named ViewModel is a StateHolder.
   - If simple logic, Call Repository (Interface) directly from ViewModel.
   - Any work performed in a ViewModel should be main-safe—safe to call from the main thread.
   - use uistate
