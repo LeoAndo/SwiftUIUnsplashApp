@@ -4,6 +4,10 @@
 
 <img width="526" alt="スクリーンショット 2022-03-09 16 08 32" src="https://user-images.githubusercontent.com/16476224/157390357-2b65b083-7189-4870-a8ff-07899d636695.png">
 
+# App architecture
+
+<img width="582" alt="スクリーンショット 2021-12-20 15 58 59" src="https://user-images.githubusercontent.com/16476224/146725205-ac598f5f-c5a6-4cc4-8d38-559ca50bdf77.png">
+
 # implementation Rules
 
 - ui layer
