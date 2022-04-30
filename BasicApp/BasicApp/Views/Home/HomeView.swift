@@ -35,7 +35,7 @@ struct HomeContent: View {
                                             .frame(width: 80, height: 80 )
                                             .cornerRadius(16)
                                     } else {
-                                        Progress() // Acts as a placeholder.
+                                        ProgressView() // Acts as a placeholder.
                                     }
                                 }
                                 .frame(width: 200, height: 200 ).cornerRadius(16)
@@ -50,7 +50,7 @@ struct HomeContent: View {
         case .initial:
             EmptyView()
         case .loading:
-            Progress()
+            ProgressView()
         case .error(let message):
             Text(message)
         }
