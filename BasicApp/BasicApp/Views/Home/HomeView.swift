@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import SDWebImageSwiftUI
 
 struct HomeView: View {
     @ObservedObject var viewModel: HomeViewModel
