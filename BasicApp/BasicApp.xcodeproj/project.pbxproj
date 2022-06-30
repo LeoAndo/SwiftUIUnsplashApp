@@ -10,7 +10,6 @@
 		AAA5D03A27D83D8900EF095E /* UnSplashPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA5D03927D83D8900EF095E /* UnSplashPhoto.swift */; };
 		AAA5D04027D8771C00EF095E /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA5D03F27D8771C00EF095E /* Injection.swift */; };
 		AAA5D04A27D87A6300EF095E /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = AAA5D04927D87A6300EF095E /* Resolver */; };
-		AAA5D04D27D87F6F00EF095E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AAA5D04C27D87F6F00EF095E /* Alamofire */; };
 		AAA5D04F27D894FD00EF095E /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA5D04E27D894FD00EF095E /* APIError.swift */; };
 		AAA5D05127D8989B00EF095E /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA5D05027D8989B00EF095E /* APIClient.swift */; };
 		AAA5D05327D8991200EF095E /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA5D05227D8991200EF095E /* APIRequest.swift */; };
@@ -34,7 +33,6 @@
 		AAB8A29927D7210C00E61D85 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB8A29827D7210C00E61D85 /* SearchViewModel.swift */; };
 		AAB8A29B27D7212E00E61D85 /* SearchUiState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB8A29A27D7212E00E61D85 /* SearchUiState.swift */; };
 		AAB8A29D27D761FA00E61D85 /* UnsplashRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB8A29C27D761FA00E61D85 /* UnsplashRepository.swift */; };
-		AAB8A2A227D76BFA00E61D85 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = AAB8A2A127D76BFA00E61D85 /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,9 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAA5D04D27D87F6F00EF095E /* Alamofire in Frameworks */,
 				AAA5D04A27D87A6300EF095E /* Resolver in Frameworks */,
-				AAB8A2A227D76BFA00E61D85 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,9 +320,7 @@
 			);
 			name = BasicApp;
 			packageProductDependencies = (
-				AAB8A2A127D76BFA00E61D85 /* SDWebImageSwiftUI */,
 				AAA5D04927D87A6300EF095E /* Resolver */,
-				AAA5D04C27D87F6F00EF095E /* Alamofire */,
 			);
 			productName = BasicApp;
 			productReference = AAB8A24B27D6334400E61D85 /* BasicApp.app */;
@@ -401,9 +395,7 @@
 			);
 			mainGroup = AAB8A24227D6334300E61D85;
 			packageReferences = (
-				AAB8A2A027D76BFA00E61D85 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 				AAA5D04127D8784D00EF095E /* XCRemoteSwiftPackageReference "Resolver" */,
-				AAA5D04B27D87F6F00EF095E /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = AAB8A24C27D6334400E61D85 /* Products */;
 			projectDirPath = "";
@@ -803,22 +795,6 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		AAA5D04B27D87F6F00EF095E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
-		AAB8A2A027D76BFA00E61D85 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -826,16 +802,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AAA5D04127D8784D00EF095E /* XCRemoteSwiftPackageReference "Resolver" */;
 			productName = Resolver;
-		};
-		AAA5D04C27D87F6F00EF095E /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AAA5D04B27D87F6F00EF095E /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-		AAB8A2A127D76BFA00E61D85 /* SDWebImageSwiftUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AAB8A2A027D76BFA00E61D85 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
-			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
