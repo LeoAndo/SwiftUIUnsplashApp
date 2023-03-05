@@ -12,13 +12,13 @@
 # implementation Rules
 
 - ui layer
-  - [Allows preview by state by taking uiState as an argument](https://github.com/LeoAndo/ios-app-templates/blob/main/BasicApp/BasicApp/Views/Home/HomeView.swift#L60:L67)
+  - [Allows preview by state by taking uiState as an argument](https://github.com/LeoAndo/ios-app-templates/blob/main/BasicApp/Views/Home/HomeView.swift#L60:L67)
   - The file named ViewModel is a StateHolder.
   - If simple logic, Call Repository (Interface) directly from ViewModel.
   - Any work performed in a ViewModel should be main-safe—safe to call from the main thread.
   - use uistate
-    - https://github.com/LeoAndo/ios-app-templates/blob/main/BasicApp/BasicApp/Views/Home/HomeUiState.swift
-    - https://github.com/LeoAndo/ios-app-templates/blob/main/BasicApp/BasicApp/Views/Home/HomeViewModel.swift#L12
+    - https://github.com/LeoAndo/ios-app-templates/blob/main/BasicApp/Views/Home/HomeUiState.swift
+    - https://github.com/LeoAndo/ios-app-templates/blob/main/BasicApp/Views/Home/HomeViewModel.swift#L12
   - ViewModel used `@MainActor` because Fix below error Log
     ```
     Fix: [SwiftUI] Publishing changes from background threads is not allowed; make sure to publish values from the main thread (via operators like receive(on:)) on model updates.  
@@ -29,8 +29,6 @@
 - data layer
   - Error handling and returning a custom Response object
   - Any work performed in a call local/remote data should be io thread.
-
-# [BasicApp](https://github.com/LeoAndo/ios-app-templates/tree/main/BasicApp)
 
 - Features
   - UI
