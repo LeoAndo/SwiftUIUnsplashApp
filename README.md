@@ -1,5 +1,3 @@
-# ios-templates
-
 # development environment
 
 <img width="526" alt="スクリーンショット 2022-03-09 16 08 32" src="https://user-images.githubusercontent.com/16476224/157390357-2b65b083-7189-4870-a8ff-07899d636695.png">
